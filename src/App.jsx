@@ -1,12 +1,11 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 
 function App() {
- 
 
   return (
     <div className="App">
-   
+          <h2>Travell Advisor</h2>
     </div>
   )
 }
