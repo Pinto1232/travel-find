@@ -4,14 +4,22 @@ import Header from './components/Header/Header'
 import List from './components/List/List'
 import Map from './components/Map/Map'
 import { CssBaseline, Grid } from '@material-ui/core'
+
+//Import the getPlacesData function
 import { getPlacesData } from '../src/api/index'
 
 
 function App() {
-  const [places, setPlaces] = useState()
+  //Creat a hook to access the data
+  const [places, setPlaces] = useState([])
 
   useEffect(() =>{
+    // Calling the getPlacesData function
     getPlacesData()
+    .then((data) =>{
+      console.log('data', data);
+      setPlaces(data)    
+    })
   }, [])
 
   return (
