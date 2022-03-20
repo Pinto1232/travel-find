@@ -18,6 +18,7 @@ function App() {
     getPlacesData()
     .then((data) =>{
       console.log('data', data);
+      //Set the setPlaces function inside of the useffect hook
       setPlaces(data)    
     })
   }, [])
